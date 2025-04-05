@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang=\"fr\">
+  <head>
+    <meta charset=\"UTF-8\" />
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+    <title>Lum&Sens - Studio Photo</title>
+    <link rel=\"stylesheet\" href=\"styles.css\" />
+    <link
+      rel=\"stylesheet\"
+      href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: \"Arial\", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #222;
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 20px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #e5a900;
+      }
+
+      section {
+        padding: 100px 20px 40px;
+        background: #fff;
+        margin-top: 60px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      footer .socials {
+        margin-top: 10px;
+      }
+
+      footer .social-icon {
+        margin: 0 15px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      footer .social-icon:hover {
+        color: #e5a900;
+        transform: scale(1.1);
+      }
+
+      footer .social-icon i {
+        margin-right: 8px;
+      }
+
+      @media (max-width: 768px) {
+        header .container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>Lum & Sens</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#tarifs">Tarifs</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section Portfolio -->
+    <section id="portfolio">
+      <div class="container">
+        <h2>Nos réalisations</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="assets/img/Photo 1.jpg" alt="Portfolio 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/Photo 2.jpg" alt="Portfolio 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/Photo 3.jpg" alt="Portfolio 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 Lum&Sens Studio Photo | <a href=\"#\">Mentions légales</a>
+        </p>
+        <div class="socials">
+          <a
+            href="https://www.facebook.com/people/Lum-Sens/61559352481968/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a
+            href="https://www.instagram.com/lumetsensphoto/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
