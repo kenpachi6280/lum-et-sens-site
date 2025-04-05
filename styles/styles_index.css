@@ -179,10 +179,6 @@ footer .social-icon i {
     align-items: flex-start;
   }
 
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
   .hero h2 {
     font-size: 2rem;
   }
@@ -190,4 +186,27 @@ footer .social-icon i {
   .btn {
     font-size: 1rem;
   }
+}
+@media (max-width: 450px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul li{
+    margin-left: 0px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  footer {
+  flex-direction: column;
+  align-items: center;
+}
 }
