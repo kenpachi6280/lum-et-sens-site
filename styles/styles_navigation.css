@@ -1,0 +1,147 @@
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header h1 a:hover,
+header h1 a:focus {
+    color: #e5a900;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:focus {
+    color: #e5a900;
+}
+
+/* Bouton burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    z-index: 1001;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animation si ouvert */
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+
+@media (max-width: 750px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+.burger {
+    display: flex;
+}
+
+.main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #222;
+    padding: 15px 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.main-nav.active {
+    display: flex;
+}
+
+@media (max-width: 450px) {
+    header h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-nav {
+        align-items: center;
+    }
+}
