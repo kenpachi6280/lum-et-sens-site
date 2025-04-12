@@ -14,19 +14,28 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- Header script -->
   <div id="header"></div>
 
-  <!-- Scripts -->
-  <script src="assets/js/header-scroll.js"></script>
-  <script src="assets/js/menu-burger.js"></script>
+  <script src="../assets/js/header-scroll.js"></script>
   <script>
-    fetch('html/navigation.html')
+    fetch('../html/navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+        initHeaderScroll(); // On appelle la fonction une fois le header injecté
+      });
+  </script>
+
+  <!-- Menu burger script -->
+  <script src="../assets/js/menu-burger.js"></script>
+  <script>
+    fetch('../html/navigation.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
         initHeaderScroll();
-        initBurgerMenu();
+        initBurgerMenu(); // Appel ici
       });
   </script>
 
