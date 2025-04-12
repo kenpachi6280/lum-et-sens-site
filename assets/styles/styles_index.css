@@ -32,6 +32,7 @@ section {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  border: 10px solid red;
 }
 
 /* Superposition sombre pour la lisibilité */
