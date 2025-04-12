@@ -19,7 +19,7 @@
 
   <script src="assets/js/header-scroll.js"></script>
   <script>
-    fetch('html/navigation.html')
+    fetch('navigation.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
@@ -30,7 +30,7 @@
   <!-- Menu burger script -->
   <script src="assets/js/menu-burger.js"></script>
   <script>
-    fetch('html/navigation.html')
+    fetch('navigation.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
@@ -44,14 +44,14 @@
     <div class="accueil-content">
       <h2>Bienvenue chez Angélique</h2>
       <p>Immortalisez vos moments précieux avec nos séances photo personnalisées.</p>
-      <a href="html/portfolio.html" class="btn">Voir nos réalisations</a>
+      <a href="portfolio.html" class="btn">Voir nos réalisations</a>
     </div>
   </section>
 
   <!-- Footer -->
   <div id="footer"></div>
   <script>
-    fetch('html/footer.html')
+    fetch('footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;

@@ -17,7 +17,7 @@
 
   <script src="../assets/js/header-scroll.js"></script>
   <script>
-    fetch('../html/navigation.html')
+    fetch('navigation.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
@@ -28,7 +28,7 @@
   <!-- Menu burger script -->
   <script src="../assets/js/menu-burger.js"></script>
   <script>
-    fetch('../html/navigation.html')
+    fetch('navigation.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
@@ -52,7 +52,7 @@
   <!-- Footer script-->
   <div id="footer"></div>
   <script>
-    fetch('../html/footer.html')
+    fetch('footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;
