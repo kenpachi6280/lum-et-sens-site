@@ -30,9 +30,10 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
-/* Superposition sombre pour la lisibilité 
+/* Superposition sombre pour la lisibilité */
 #accueil::before {
   content: "";
   position: absolute;
@@ -40,10 +41,10 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* assombrit l’image 
+  background: rgba(0, 0, 0, 0.2); /* plus léger */
   z-index: 1;
 }
-*/
+
 
 /* Contenu de la section accueil */
 .accueil-content {
