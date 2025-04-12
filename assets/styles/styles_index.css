@@ -19,7 +19,8 @@ section {
 
 /* 🎯 Spécifique à la section Accueil avec image de fond */
 #accueil {
-  background-image: url("../img/fond-accueil.jpg");
+  background-image: url("../img/fond accueil.jpg");
+  background-color: #000; /* couleur de fond de secours */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
