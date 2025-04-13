@@ -103,8 +103,6 @@ section {
   display: block;
 }
 
-
-
 .carte h4 {
   font-size: 1.3rem;
   margin-bottom: 15px;
@@ -153,7 +151,6 @@ section {
 .carte.active .fermer-carte {
   display: block;
 }
-
 
 /* ========================== */
 /* 📱 Très petits appareils - Moins de 576px */
