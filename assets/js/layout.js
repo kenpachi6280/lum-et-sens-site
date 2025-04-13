@@ -1,15 +1,15 @@
 function loadLayout() {
-  // Header
+  // Charger le header
   fetch("navigation.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("header").innerHTML = data;
+
       if (typeof initHeaderScroll === "function") initHeaderScroll();
       if (typeof initBurgerMenu === "function") initBurgerMenu();
-      adjustNavLinks();
     });
 
-  // Footer
+  // Charger le footer
   fetch("footer.html")
     .then(response => response.text())
     .then(data => {
@@ -22,5 +22,5 @@ function loadLayout() {
   });
 }
 
-// Appel automatique
+// Appel automatique quand le DOM est prêt
 document.addEventListener("DOMContentLoaded", loadLayout);
