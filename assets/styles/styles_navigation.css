@@ -1,3 +1,4 @@
+/* ===== HEADER GENERAL ===== */
 header {
     background-color: #222;
     color: #fff;
@@ -35,6 +36,7 @@ header h1 a:focus {
     color: #e5a900;
 }
 
+/* ===== NAVIGATION ===== */
 nav {
     margin-top: 10px;
 }
@@ -60,7 +62,7 @@ nav {
     color: #e5a900;
 }
 
-/* Bouton burger */
+/* ===== BURGER MENU ===== */
 .burger {
     display: none;
     flex-direction: column;
@@ -82,7 +84,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* Animation si ouvert */
 .burger.open span:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
 }
@@ -95,29 +96,7 @@ nav {
     transform: rotate(-45deg) translateY(-8px);
 }
 
-
-@media (max-width: 750px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    .main-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 10px;
-    }
-}
-
-.burger {
-    display: flex;
-}
-
+/* ===== NAV ACTIVE (pour menu ouvert en mobile) ===== */
 .main-nav {
     display: none;
     flex-direction: column;
@@ -134,7 +113,9 @@ nav {
     display: flex;
 }
 
-@media (max-width: 450px) {
+/* ========================== */
+/* 📱 Très petits appareils - Moins de 576px */
+@media (max-width: 575.98px) {
     header h1 {
         font-size: 2rem;
         text-align: center;
@@ -143,5 +124,120 @@ nav {
 
     .main-nav {
         align-items: center;
+    }
+}
+
+/* 📲 Petits appareils - ≥ 576px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* 💻 Tablettes - ≥ 768px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* 🖥️ Ordinateurs portables - ≥ 992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* 🖥️ Grands écrans - ≥ 1200px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    header .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        position: static;
+        background: none;
+        padding: 0;
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
+/* 📺 Très grands écrans - ≥ 1400px */
+@media (min-width: 1400px) {
+    header .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        position: static;
+        background: none;
+        padding: 0;
+    }
+
+    .burger {
+        display: none;
     }
 }

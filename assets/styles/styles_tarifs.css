@@ -1,25 +1,49 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Arial", sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-  }
-  
-  section {
-    padding: 40px 20px 40px;
-    background: #fff;
-    margin-top: 100px;
-  }
-  
-  @media (max-width: 750px) {
-  }
-  @media (max-width: 450px) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  }
-  
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+section {
+  padding: 40px 20px 40px;
+  background: #fff;
+  margin-top: 100px;
+}
+
+/* ========================== */
+/* 📱 Très petits appareils - Moins de 576px */
+@media (max-width: 575.98px) {
+  /* Styles spécifiques aux très petits écrans */
+}
+
+/* 📲 Petits appareils - ≥ 576px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Styles pour smartphones moyens / paysage */
+}
+
+/* 💻 Tablettes - ≥ 768px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Styles pour tablettes */
+}
+
+/* 🖥️ Ordinateurs portables - ≥ 992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Styles pour laptops */
+}
+
+/* 🖥️ Grands écrans - ≥ 1200px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* Styles pour écrans de bureau */
+}
+
+/* 📺 Très grands écrans - ≥ 1400px */
+@media (min-width: 1400px) {
+  /* Styles pour très grands écrans */
+}

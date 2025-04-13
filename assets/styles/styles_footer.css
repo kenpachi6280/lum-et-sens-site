@@ -1,15 +1,16 @@
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 40px;
+  padding: 20px;
   text-align: center;
   margin-top: auto;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 footer p {
   margin: 0;
   line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 footer a {
@@ -20,22 +21,24 @@ footer a {
 footer a:hover,
 footer a:focus {
   color: #e5a900;
+  text-decoration: underline;
 }
 
 footer .socials {
   margin-top: 15px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
 footer .social-icon {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  font-size: 1.1rem;
   color: #fff;
-  font-size: 1.3rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -48,8 +51,9 @@ footer .social-icon:focus {
 /* 🎯 Bloc licence Creative Commons */
 footer .cc-license {
   margin-top: 15px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.4;
+  padding: 0 10px;
 }
 
 footer .cc-license img {
@@ -58,41 +62,58 @@ footer .cc-license img {
   margin-bottom: 5px;
 }
 
-footer .cc-license a {
-  color: #fff;
-}
-
 footer .cc-license a:hover {
   color: #e5a900;
 }
 
-/* 📱 Responsive design */
-@media (max-width: 600px) {
+/* ========================== */
+/* 📲 Petits appareils - ≥ 576px */
+@media (min-width: 576px) and (max-width: 767.98px) {
   footer {
-    padding: 20px;
-    font-size: 0.95rem;
-  }
-
-  footer .socials {
-    flex-direction: column;
-    align-items: center;
+    font-size: 1rem;
+    padding: 20px 30px;
   }
 
   footer .social-icon {
-    font-size: 1.1rem;
-  }
-
-  footer p {
-    margin-bottom: 10px;
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 360px) {
+/* 💻 Tablettes - ≥ 768px */
+@media (min-width: 768px) and (max-width: 991.98px) {
   footer {
-    font-size: 0.9rem;
+    padding: 20px 40px;
   }
 
   footer .socials {
-    gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer .social-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* 🖥️ Ordinateurs portables - ≥ 992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  footer {
+    padding: 25px 60px;
+    font-size: 1rem;
+  }
+}
+
+/* 🖥️ Grands écrans - ≥ 1200px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  footer {
+    font-size: 1.05rem;
+  }
+}
+
+/* 📺 Très grands écrans - ≥ 1400px */
+@media (min-width: 1400px) {
+  footer {
+    font-size: 1.1rem;
+    padding: 30px 80px;
   }
 }

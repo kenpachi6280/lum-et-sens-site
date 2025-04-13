@@ -21,7 +21,6 @@ section {
 #accueil {
   background-image: url("../img/fond-accueil.jpg");
   background-color: #000;
-  /* couleur de fond de secours */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -43,7 +42,6 @@ section {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  /* plus léger */
   z-index: 1;
 }
 
@@ -51,7 +49,6 @@ section {
 .accueil-content {
   position: relative;
   z-index: 2;
-  /* au-dessus du fond sombre */
   height: auto;
   color: #fff;
   display: flex;
@@ -86,22 +83,9 @@ section {
   background-color: #333;
 }
 
-/* 🔁 Responsive */
-@media (max-width: 750px) {
-  section {
-    padding: 60px 20px;
-  }
-
-  .accueil-content h2 {
-    font-size: 2rem;
-  }
-
-  .btn {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 450px) {
+/* ========================== */
+/* 📱 Très petits appareils - Moins de 576px */
+@media (max-width: 575.98px) {
   section {
     padding: 60px 20px;
   }
@@ -117,4 +101,35 @@ section {
   .btn {
     font-size: 0.95rem;
   }
+}
+
+/* 📲 Petits appareils - ≥ 576px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .accueil-content h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+/* 💻 Tablettes - ≥ 768px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Styles pour tablettes */
+}
+
+/* 🖥️ Ordinateurs portables - ≥ 992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Styles pour laptops */
+}
+
+/* 🖥️ Grands écrans - ≥ 1200px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* Styles pour écrans de bureau */
+}
+
+/* 📺 Très grands écrans - ≥ 1400px */
+@media (min-width: 1400px) {
+  /* Styles pour très grands écrans */
 }
