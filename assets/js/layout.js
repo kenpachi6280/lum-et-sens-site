@@ -1,6 +1,6 @@
 function loadLayout() {
   // Header
-  fetch("../../navigation.html")
+  fetch("navigation.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("header").innerHTML = data;
@@ -10,7 +10,7 @@ function loadLayout() {
     });
 
   // Footer
-  fetch("../../footer.html")
+  fetch("footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
