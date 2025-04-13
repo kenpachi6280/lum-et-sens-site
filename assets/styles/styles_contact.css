@@ -73,7 +73,8 @@ button.send:hover {
 .map-responsive {
   position: relative;
   overflow: hidden;
-  padding-bottom: 56.25%; /* Ratio 16:9 */
+  padding-bottom: 56.25%;
+  /* Ratio 16:9 */
   height: 0;
   border-radius: 8px;
 }
@@ -93,7 +94,8 @@ button.send:hover {
   max-width: 100%;
   overflow-x: hidden;
   margin: 0 auto;
-  padding: 0 10px; /* marges intérieures pour petits écrans */
+  padding: 0 10px;
+  /* marges intérieures pour petits écrans */
   box-sizing: border-box;
 }
 
