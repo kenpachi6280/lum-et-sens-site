@@ -1,71 +1,209 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lum&Sens - Studio Photo</title>
+    <link rel="stylesheet" href="assets/styles/styles_tarifs.css" />
+    <link rel="stylesheet" href="assets/styles/styles_navigation.css" />
+    <link rel="stylesheet" href="assets/styles/styles_footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lum&Sens - Studio Photo</title>
-  <link rel="stylesheet" href="assets/styles/styles_tarifs.css" />
-  <link rel="stylesheet" href="assets/styles/styles_navigation.css" />
-  <link rel="stylesheet" href="assets/styles/styles_footer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <script>
-    document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-    });
-  </script>
-
-</head>
-
-<body>
-  <!-- Header script -->
-  <div id="header"></div>
-
-  <script src="assets/js/header-scroll.js"></script>
-  <script>
-    fetch('navigation.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-        initHeaderScroll(); // On appelle la fonction une fois le header injecté
+    <script>
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
       });
-  </script>
+    </script>
+  </head>
 
-  <!-- Menu burger script -->
-  <script src="assets/js/menu-burger.js"></script>
-  <script>
-    fetch('navigation.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-        initHeaderScroll();
-        initBurgerMenu(); // Appel ici
-      });
-  </script>
+  <body>
+    <!-- Header script -->
+    <div id="header"></div>
 
-  <!-- Section Tarifs -->
-  <section id="tarifs">
-    <div class="container">
-      <h2>Nos Tarifs</h2>
-      <p>Pour un devis personnalisé, contactez-nous directement.</p>
-    </div>
-  </section>
+    <script src="assets/js/header-scroll.js"></script>
+    <script>
+      fetch("navigation.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          initHeaderScroll(); // On appelle la fonction une fois le header injecté
+        });
+    </script>
 
-  <div>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis exercitationem ea velit, eius dicta sequi nihil. Cumque ratione consequuntur odio veniam voluptates tempore sequi incidunt placeat libero modi nostrum pariatur quas illum ipsum maxime magnam saepe soluta iure, quisquam dicta repellat exercitationem quos porro. Error, cupiditate nisi ut incidunt libero repudiandae voluptatem aliquid fugiat aliquam. Distinctio quam quos itaque sapiente illo laborum iusto veniam debitis! Provident quia molestiae nisi earum dolor consequatur atque, perspiciatis ea. Incidunt vitae expedita reprehenderit asperiores, omnis officiis aspernatur velit! Nulla culpa voluptates, dolor quisquam hic repudiandae tenetur fugit vitae, accusantium reiciendis et quis, dolorum explicabo alias quam. Autem ipsam vero consequatur excepturi quaerat minus nostrum obcaecati perferendis repellat nesciunt! Possimus accusantium animi, porro minima quae nihil laudantium omnis totam. Nihil maiores, sequi, soluta aut culpa aspernatur, tempore provident impedit in debitis error magni sed et vel. Voluptate dolorum, ea, asperiores doloribus pariatur obcaecati, molestiae inventore quis voluptas rerum quos quo laborum repudiandae tempore? Repellat ab, iste totam, vero voluptatibus maxime sint dicta eaque expedita fuga recusandae porro saepe neque. Sit ipsum quis neque. Quibusdam voluptates ipsa quae laborum voluptas repellat nisi molestias repellendus aliquid esse deserunt rerum quas doloribus adipisci, ea mollitia necessitatibus eligendi quasi animi id accusamus asperiores voluptatum corrupti! Accusamus, nesciunt. Accusantium doloremque numquam blanditiis ipsa veritatis, recusandae voluptatum deserunt totam itaque eius dolor atque rem, fugit aperiam deleniti aspernatur id et? Praesentium eos est neque, quam fuga deleniti quisquam exercitationem recusandae quod quo magnam commodi sapiente assumenda voluptatum numquam autem iste! Quod quam, facilis in quisquam ipsum maxime consequatur totam reiciendis accusantium aspernatur suscipit ea porro? Magni ducimus molestias reprehenderit, nostrum commodi eos dicta voluptatem similique perferendis dolore vel maiores reiciendis suscipit quisquam! Placeat, labore explicabo, quis officia dignissimos beatae illum praesentium provident atque iusto earum eligendi adipisci soluta quas fuga sint. Hic modi nostrum soluta, nulla temporibus maxime voluptatum culpa dolorum perferendis nesciunt provident nihil, adipisci sapiente sit iusto dignissimos officia expedita eaque ipsum excepturi inventore exercitationem atque. Nostrum molestias, vitae officiis omnis eius dolor repellat blanditiis neque. Ad voluptas iste voluptatem? Deserunt sed sapiente libero ratione rerum placeat voluptatem rem nam ab, ipsam praesentium officia possimus vero earum accusamus? Distinctio esse quae nisi, sint odio magnam. Veniam harum quo quas ipsum delectus eveniet dolorem vel quaerat repellat! Odio unde dolore minus fugit alias adipisci tenetur perspiciatis, pariatur eligendi iusto ab odit? Praesentium rem nostrum dolor perspiciatis facere qui earum harum odio. Minus quae sed quidem eos ab unde, incidunt ea cupiditate ipsa. Iste reprehenderit expedita aliquam, tempore dolorem nostrum facere. Similique sint laudantium natus expedita dolorum recusandae perspiciatis voluptatibus mollitia corrupti fugiat sunt deleniti omnis aut at ad optio voluptatem repudiandae, aspernatur debitis voluptate ab. Labore dignissimos consectetur illum voluptas obcaecati amet eaque optio. Eligendi enim rerum cupiditate maxime neque, debitis sit aspernatur exercitationem doloremque eum voluptate, earum quis labore nulla est! Iure rerum eveniet vitae ullam neque error necessitatibus nobis nam. Quasi quas aut minima debitis. Porro amet accusamus iusto repellat autem odit quo aliquam voluptatum inventore. Pariatur, labore.
-  </div>
+    <!-- Menu burger script -->
+    <script src="assets/js/menu-burger.js"></script>
+    <script>
+      fetch("navigation.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          initHeaderScroll();
+          initBurgerMenu(); // Appel ici
+        });
+    </script>
 
-  <!-- Footer script-->
-  <div id="footer"></div>
-  <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  </script>
+    <!-- Section Tarifs -->
+    <section id="tarifs">
+      <div class="container">
+        <h2 class="titre-section">Nos Tarifs 2025 & Prestations</h2>
+        <p class="intro">
+          Pour un devis personnalisé, contactez-nous directement.
+        </p>
 
-</body>
+        <!-- Catégorie : Thèmes & Événements -->
+        <div class="categorie">
+          <h3>Photographie Thèmes & Événements</h3>
+          <img
+            src="assets/images/tarifs/themes-anniversaire-bapteme.jpg"
+            alt="Shooting Thèmes et Événements"
+          />
+          <div class="cartes">
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Mini Shooting Studio à Thème</h4>
+              <ul>
+                <li>30 à 45 minutes</li>
+                <li>50 photos digitales</li>
+                <li>15 retouchées</li>
+                <li>Studio</li>
+                <li>Impressions ou album sur devis</li>
+                <li>Noël, St-Valentin, Fête des Mères/Pères, Pâques, Noces</li>
+              </ul>
+              <p class="prix">60 €</p>
+            </div>
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Shooting Anniversaire</h4>
+              <ul>
+                <li>60 minutes</li>
+                <li>50 à 100 photos digitales</li>
+                <li>20 retouchées</li>
+                <li>Studio, salle ou domicile</li>
+                <li>1 espace photo aménagé</li>
+              </ul>
+              <p class="prix">80 €</p>
+            </div>
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Shooting Baptême</h4>
+              <ul>
+                <li>120 à 180 minutes</li>
+                <li>150 à 200 photos digitales</li>
+                <li>40 retouchées</li>
+                <li>Église + salle</li>
+                <li>1 espace photo aménagé</li>
+              </ul>
+              <p class="prix">250 €</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Catégorie : Grossesse & Naissance -->
+        <div class="categorie">
+          <h3>Photographie Grossesse & Naissance</h3>
+          <img
+            src="assets/images/tarifs/grossesse-naissance.jpg"
+            alt="Shooting Grossesse et Bébé"
+          />
+          <div class="cartes">
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Shooting Grossesse</h4>
+              <ul>
+                <li>60 minutes</li>
+                <li>50 à 75 photos digitales</li>
+                <li>20 retouchées</li>
+                <li>Intérieur ou Extérieur</li>
+              </ul>
+              <p class="prix">125 €</p>
+            </div>
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Shooting Nouveau-né</h4>
+              <ul>
+                <li>60 minutes</li>
+                <li>50 à 75 photos digitales</li>
+                <li>20 retouchées</li>
+                <li>Studio ou domicile</li>
+                <li>Jusqu'à 4 mois</li>
+              </ul>
+              <p class="prix">125 €</p>
+            </div>
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Pack Avenir</h4>
+              <ul>
+                <li>3 x 60 minutes</li>
+                <li>100 à 200 photos digitales</li>
+                <li>60 retouchées</li>
+                <li>Grossesse - Naissance - 1 an</li>
+              </ul>
+              <p class="prix">300 €</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catégorie : Portrait & Famille -->
+        <div class="categorie">
+          <h3>Portrait, Famille & Enfants</h3>
+          <img
+            src="assets/images/tarifs/portrait-famille-enfants-couple.jpg"
+            alt="Shooting Portraits et Famille"
+          />
+          <div class="cartes">
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Mini Shooting Studio</h4>
+              <ul>
+                <li>30 à 45 minutes</li>
+                <li>50 photos digitales</li>
+                <li>15 retouchées</li>
+                <li>Studio</li>
+              </ul>
+              <p class="prix">60 €</p>
+            </div>
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Shooting Découverte</h4>
+              <ul>
+                <li>60 à 90 minutes</li>
+                <li>50 à 100 photos digitales</li>
+                <li>20 retouchées</li>
+                <li>Intérieur ou Extérieur</li>
+                <li>3 à 5 tenues</li>
+              </ul>
+              <p class="prix">90 €</p>
+            </div>
+            <div class="carte">
+              <span class="fermer-carte">&times;</span>
+              <h4>Shooting Expérience</h4>
+              <ul>
+                <li>120 à 180 minutes</li>
+                <li>120 à 180 photos digitales</li>
+                <li>30 retouchées</li>
+                <li>Tenues illimitées</li>
+              </ul>
+              <p class="prix">150 €</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer script-->
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script src="assets/js/carte-popup.js"></script>
+
+    <div id="overlay"></div>
+  </body>
 </html>

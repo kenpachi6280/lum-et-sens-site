@@ -1,3 +1,4 @@
+/* Réinitialisation et base */
 * {
   margin: 0;
   padding: 0;
@@ -12,38 +13,206 @@ body {
 }
 
 section {
-  padding: 40px 20px 40px;
+  padding: 40px 20px;
   background: #fff;
   margin-top: 100px;
 }
 
+/* Section Tarifs */
+#tarifs .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#tarifs h2.titre-section {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+#tarifs .intro {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+#tarifs .categorie {
+  margin-bottom: 60px;
+}
+
+#tarifs .categorie h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #111;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+#tarifs .categorie img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.cartes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.carte {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  flex: 1 1 300px;
+  max-width: 350px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.carte.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+  z-index: 1000;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  background-color: #fff;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
+
+
+.carte h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #222;
+  text-align: center;
+}
+
+.carte ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.carte ul li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.carte .prix {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000;
+  background-color: #e0e0e0;
+  padding: 12px 16px;
+  text-align: center;
+  border-radius: 12px;
+  width: calc(100% - 40px);
+  /* tient compte des 20px de padding de la carte */
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.fermer-carte {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+.carte.active .fermer-carte {
+  display: block;
+}
+
+
 /* ========================== */
 /* 📱 Très petits appareils - Moins de 576px */
 @media (max-width: 575.98px) {
-  /* Styles spécifiques aux très petits écrans */
+  .cartes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carte {
+    width: 100%;
+  }
+
+  #tarifs h2.titre-section {
+    font-size: 2rem;
+  }
+
+  #tarifs .categorie h3 {
+    font-size: 1.4rem;
+  }
 }
 
 /* 📲 Petits appareils - ≥ 576px */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  /* Styles pour smartphones moyens / paysage */
+  .cartes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carte {
+    width: 80%;
+  }
 }
 
-/* 💻 Tablettes - ≥ 768px */
+/* 💼 Tablettes - ≥ 768px */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* Styles pour tablettes */
+  .cartes {
+    justify-content: center;
+    gap: 30px;
+  }
 }
 
 /* 🖥️ Ordinateurs portables - ≥ 992px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* Styles pour laptops */
+  .cartes {
+    gap: 25px;
+  }
 }
 
 /* 🖥️ Grands écrans - ≥ 1200px */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  /* Styles pour écrans de bureau */
+  .cartes {
+    gap: 20px;
+  }
 }
 
 /* 📺 Très grands écrans - ≥ 1400px */
 @media (min-width: 1400px) {
-  /* Styles pour très grands écrans */
+  .cartes {
+    gap: 20px;
+  }
 }
