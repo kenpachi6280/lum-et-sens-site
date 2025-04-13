@@ -37,7 +37,7 @@ form textarea:focus {
 }
 
 /* Bouton d'envoi */
-button {
+button.send {
   padding: 15px 30px;
   background-color: #333;
   color: #fff;
@@ -48,7 +48,7 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+button.send:hover {
   background-color: #e5a900;
 }
 
@@ -87,6 +87,16 @@ button:hover {
   border: 0;
 }
 
+/* Nouveau wrapper pour éviter tout débordement horizontal */
+.map-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0 10px; /* marges intérieures pour petits écrans */
+  box-sizing: border-box;
+}
+
 /* ========================== */
 /* 📱 Très petits appareils - Moins de 576px */
 @media (max-width: 575.98px) {
@@ -105,7 +115,7 @@ button:hover {
     font-size: 1rem;
   }
 
-  button {
+  button.send {
     font-size: 1rem;
     padding: 12px 20px;
     width: 100%;
@@ -118,7 +128,7 @@ button:hover {
     padding: 50px 15px;
   }
 
-  button {
+  button.send {
     width: 100%;
   }
 }
@@ -133,7 +143,7 @@ button:hover {
     padding: 1.5em 1em;
   }
 
-  button {
+  button.send {
     width: 100%;
   }
 }
