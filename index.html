@@ -2,9 +2,29 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Studio photo Lum&Sens – Séances personnalisées pour immortaliser vos moments précieux."
+    />
     <meta name="copyright" content="© 2025 Lum&Sens" />
-    <title>Accueil – Lum&Sens – Studio Photo</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lum&Sens – Studio Photo" />
+    <meta
+      property="og:description"
+      content="Immortalisez vos moments précieux avec nos séances photo personnalisées."
+    />
+    <meta property="og:image" content="assets/images/preview.jpg" />
+    <meta
+      property="og:url"
+      content="https://kenpachi6280.github.io/lum-et-sens-site/"
+    />
+    <meta property="og:type" content="website" />
 
     <!-- Feuilles de styles -->
     <link rel="stylesheet" href="assets/styles/styles_index.css" />
@@ -14,30 +34,41 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="icon" href="assets/favicon.ico" />
+
+    <title>Accueil – Lum&Sens – Studio Photo</title>
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Aller au contenu principal</a>
     <!-- Header (chargé dynamiquement) -->
     <div id="header"></div>
 
     <!-- Section Accueil -->
-    <section id="accueil">
-      <div class="accueil-content">
-        <h2>Bienvenue chez Angélique</h2>
-        <p>
-          Immortalisez vos moments précieux avec nos séances photo
-          personnalisées.
-        </p>
-        <a href="portfolio.html" class="btn">Voir nos réalisations</a>
-      </div>
-    </section>
+    <main id="main">
+      <section id="accueil">
+        <div class="accueil-content">
+          <h1>Bienvenue chez Angélique</h1>
+          <p>
+            Immortalisez vos moments précieux avec nos séances photo
+            personnalisées.
+          </p>
+          <a
+            href="portfolio.html"
+            class="btn"
+            aria-label="Voir nos réalisations"
+            >Voir nos réalisations</a
+          >
+        </div>
+      </section>
+    </main>
 
     <!-- Footer dynamique -->
     <div id="footer"></div>
 
-    <!-- Scripts JS -->
-    <script src="assets/js/header-scroll.js"></script>
-    <script src="assets/js/menu-burger.js"></script>
-    <script src="assets/js/layout.js"></script>
+    <!-- Scripts avec defer pour optimiser le rendu -->
+    <script src="assets/js/header-scroll.js" defer></script>
+    <script src="assets/js/menu-burger.js" defer></script>
+    <script src="assets/js/layout.js" defer></script>
   </body>
 </html>

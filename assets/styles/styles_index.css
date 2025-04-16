@@ -60,7 +60,7 @@ section {
   padding: 40px 20px;
 }
 
-.accueil-content h2 {
+.accueil-content h1 {
   font-size: 3rem;
 }
 
@@ -94,7 +94,7 @@ section {
     padding: 20px;
   }
 
-  .accueil-content h2 {
+  .accueil-content h1 {
     font-size: 1.6rem;
   }
 
@@ -105,7 +105,7 @@ section {
 
 /* 📲 Petits appareils - ≥ 576px */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .accueil-content h2 {
+  .accueil-content h1 {
     font-size: 2rem;
   }
 
