@@ -86,6 +86,7 @@ section {
 /* ========================== */
 /* 📱 Très petits appareils - Moins de 576px */
 @media (max-width: 575.98px) {
+  
   section {
     padding: 60px 20px;
   }
