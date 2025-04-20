@@ -33,17 +33,32 @@ body { /* Sélecteur de l'élément body */
 }
 
 .gallery h2 {
-  font-size: 1.4rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.5rem; /* Taille de la police pour le titre de la galerie */
+  letter-spacing: 0.03em; /* Espacement entre les lettres */
+  text-align: center; /* Centre le texte */
+  margin-bottom: 1rem; /* Marge inférieure */
+  color: #2a2a2a; /* Couleur du texte */
+  font-family: 'Montserrat', sans-serif; /* Police de caractères pour le titre */
+  font-style: normal; /* Style de police normal */
+  position: relative; /* Positionnement relatif pour le titre */
+  padding-bottom: 0.5rem; /* Remplissage inférieur */
+  line-height: 1.2; /* Interligne pour le titre */
+}
+
+.gallery h2::after {
+  content: ''; /* Contenu vide pour le pseudo-élément après le titre */
+  display: block; /* Affiche le pseudo-élément comme un bloc */
+  width: 3rem; /* Largeur du pseudo-élément */
+  height: 2px; /* Hauteur du pseudo-élément */
+  background: #e5a900; /* Couleur de fond du pseudo-élément */
+  margin: 0.5rem auto 0; /* Marge supérieure et inférieure */
 }
 
 /* Iframe Facebook */
 .gallery iframe {
   width: 100%;
   height: auto;
-  aspect-ratio: 9 / 12;
+  aspect-ratio: 9 / 12; /* Ratio d'aspect pour l'iframe */
   border-radius: 0.75rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   border: none;
