@@ -9,6 +9,7 @@ body { /* Sélecteur de l'élément body */
   line-height: 1.6; /* Définit l'interligne pour le texte */
   color: #333; /* Définit la couleur du texte */
   background-color: #f4f4f4; /* Définit la couleur de fond */
+  padding-top: 100px;
 } 
 
 #portfolio {
@@ -123,6 +124,7 @@ body { /* Sélecteur de l'élément body */
   .gallery {
     align-items: center;
     padding: 2rem;
+    margin-bottom: 5px;
   }
 }
 
@@ -141,5 +143,6 @@ body { /* Sélecteur de l'élément body */
   .gallery {
     align-items: center;
     padding: 2rem;
+    margin-bottom: 5px;
   }
 }
