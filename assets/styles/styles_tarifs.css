@@ -10,18 +10,18 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* pour un scroll fluide vers les ancres */
 }
 
-body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
+body { 
+  font-family: "Arial", sans-serif; /* police par défaut */
+  line-height: 1.6; /* interligne par défaut */
+  color: #333; /* couleur du texte par défaut */
+  background-color: #f4f4f4; /* couleur de fond par défaut */
   overflow-x: hidden; /* empêche le scroll horizontal global */
 }
 
-body.no-scroll {
+body.no-scroll { /* classe ajoutée par JS pour désactiver le scroll */
   overflow: hidden; /* désactive le scroll vertical ET horizontal */
 }
 
