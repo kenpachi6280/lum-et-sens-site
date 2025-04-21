@@ -1,12 +1,12 @@
 /* ===========================================
    0. Reset & Base
    =========================================== */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*, /* sélectionne tous les éléments */
+*::before, /* sélectionne tous les éléments, y compris les pseudo-éléments */
+*::after { /* sélectionne tous les éléments, y compris les pseudo-éléments */
+  margin: 0; /* réinitialise les marges */
+  padding: 0; /* réinitialise les espacements */
+  box-sizing: border-box; /* définit le modèle de boîte pour tous les éléments */
 }
 
 html {
@@ -32,9 +32,9 @@ body.no-scroll { /* classe ajoutée par JS pour désactiver le scroll */
   --clr-bg: #fff;
   --clr-text: #333;
   --clr-text-light: #666;
-  --clr-shadow: rgba(0, 0, 0, 0.08);
-  --clr-shadow-lg: rgba(0, 0, 0, 0.4);
-  --clr-overlay: rgba(0, 0, 0, 0.6);
+  --clr-shadow: rgba(0, 0, 0, 0.2); /* ombre portée */
+  --clr-shadow-lg: rgba(0, 0, 0, 0.9); /* ombre plus forte pour le mode plein écran */
+  --clr-overlay: rgba(0, 0, 0, 0.6); /* couleur de l'overlay */
   --radius-base: 12px;
   --transition-fast: 0.3s ease;
   --transition-slow: 0.4s ease-in-out;
@@ -50,9 +50,9 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 
-#tarifs .container {
-  max-width: 1200px;
-  margin: 0 auto;
+#tarifs .container { /* conteneur pour centrer le contenu */
+  max-width: 1200px; /* largeur maximale du conteneur */
+  margin: 0 auto; /* centre le conteneur horizontalement */
 }
 
 /* ===========================================
@@ -96,11 +96,11 @@ section {
 /* ===========================================
       5. Cartes (grid / flex container)
       =========================================== */
-#tarifs .cartes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+#tarifs .cartes { /* conteneur pour les cartes */
+  display: flex; /* utilise le modèle flexbox */
+  flex-wrap: wrap; /* permet aux cartes de passer à la ligne si l'espace est insuffisant */
+  justify-content: space-around; /* espace entre les cartes */
+  gap: 20px; /* espace entre les cartes */
 }
 
 /* ===========================================
@@ -110,24 +110,24 @@ section {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: var(--radius-base);
-  box-shadow: 0 0 12px var(--clr-shadow);
-  flex: 1 1 300px;
+  box-shadow: 0 0 20px var(--clr-shadow); /* ombre portée */
+  flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
   max-width: 350px;
   position: relative;
   cursor: pointer;
-  opacity: 0.9;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
+  /* opacity: 0.9; */ /* légère transparence par défaut */
 }
 
 #tarifs .carte:hover {
-  transform: scale(1.02);
+  transform: scale(1.02); /* effet de zoom au survol */
 }
 
 #tarifs .carte.active {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.1);
+  position: fixed; /* pour le mode plein écran */
+  top: 50%; /* pour le mode plein écran */
+  left: 50%; /* pour le mode plein écran */
+  transform: translate(-50%, -50%) scale(1); /* pour le mode plein écran */
   width: 90%;
   max-width: 600px;
   background-color: var(--clr-bg);
@@ -176,45 +176,45 @@ section {
 /* ===========================================
       7. Overlay
       =========================================== */
-#overlay {
+#overlay { /* overlay pour le mode plein écran */
   position: fixed;
-  inset: 0;
-  background: var(--clr-overlay);
-  opacity: 0;
+  inset: 0; /* top, right, bottom, left à 0 */
+  background: var(--clr-overlay); /* couleur de fond de l'overlay */
+  opacity: 0; /* invisible par défaut */
   visibility: hidden;
   transition: opacity var(--transition-fast),
     visibility 0s linear var(--transition-fast);
 }
 
 #overlay.active {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0s;
+  opacity: 1; /* visible quand la carte est active */
+  visibility: visible; /* visible quand la carte est active */
+  transition-delay: 0s; /* délai pour la visibilité */
 }
 
 /* ===========================================
       8. Bouton fermer
       =========================================== */
 .fermer-carte {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition-fast);
+  position: absolute; /* positionné par rapport à la carte */
+  top: 8px; /* positionné en haut de la carte */
+  right: 8px; /* positionné à droite de la carte */
+  background: transparent; /* fond transparent pour le bouton */
+  border: none; /* pas de bordure pour le bouton */
+  font-size: 1.5rem; /* taille de la police pour le bouton */
+  cursor: pointer; /* curseur pointer pour le bouton */
+  opacity: 0; /* invisible par défaut */
+  pointer-events: none; /* désactive les événements de la souris */
+  transition: transform var(--transition-fast), opacity var(--transition-fast); /* transition fluide pour rotation + opacité */
 }
 
-.fermer-carte:hover {
-  transform: rotate(90deg);
+.fermer-carte:hover { /* effet de survol pour le bouton fermer */
+  transform: rotate(90deg); /* rotation pour l'effet visuel */
 }
 
-.carte.active .fermer-carte {
-  opacity: 1;
-  pointer-events: auto;
+.carte.active .fermer-carte { /* visible uniquement quand la carte est active */
+  opacity: 1; /* visible quand la carte est active */
+  pointer-events: auto; /* active les événements de la souris */
 }
 
 /* ========================== */

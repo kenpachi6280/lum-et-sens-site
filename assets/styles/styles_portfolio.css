@@ -1,9 +1,14 @@
-* { /* Sélecteur universel */
-  margin: 0; /* Réinitialise la marge de tous les éléments */
-  padding: 0; /* Réinitialise le remplissage de tous les éléments */
-  box-sizing: border-box; /* Définit le modèle de boîte pour tous les éléments */
-}
-
+/* ===========================================
+   0. Reset & Base
+   =========================================== */
+   *, /* sélectionne tous les éléments */
+   *::before, /* sélectionne tous les éléments, y compris les pseudo-éléments */
+   *::after { /* sélectionne tous les éléments, y compris les pseudo-éléments */
+     margin: 0; /* réinitialise les marges */
+     padding: 0; /* réinitialise les espacements */
+     box-sizing: border-box; /* définit le modèle de boîte pour tous les éléments */
+   }
+   
 body { /* Sélecteur de l'élément body */
   font-family: "Arial", sans-serif; /* Définit la police de caractères pour le corps du document */
   line-height: 1.6; /* Définit l'interligne pour le texte */

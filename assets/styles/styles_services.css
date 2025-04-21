@@ -1,9 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ===========================================
+   0. Reset & Base
+   =========================================== */
+   *, /* sélectionne tous les éléments */
+   *::before, /* sélectionne tous les éléments, y compris les pseudo-éléments */
+   *::after { /* sélectionne tous les éléments, y compris les pseudo-éléments */
+     margin: 0; /* réinitialise les marges */
+     padding: 0; /* réinitialise les espacements */
+     box-sizing: border-box; /* définit le modèle de boîte pour tous les éléments */
+   }
+   
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
