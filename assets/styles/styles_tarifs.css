@@ -1,42 +1,78 @@
-/* Réinitialisation et base */
-* {
+/* ===========================================
+   0. Reset & Base
+   =========================================== */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f4;
+  overflow-x: hidden; /* empêche le scroll horizontal global */
 }
 
+body.no-scroll {
+  overflow: hidden; /* désactive le scroll vertical ET horizontal */
+}
+
+/* ===========================================
+      1. Variables CSS (exemple)
+      =========================================== */
+:root {
+  --clr-bg: #fff;
+  --clr-text: #333;
+  --clr-text-light: #666;
+  --clr-shadow: rgba(0, 0, 0, 0.08);
+  --clr-shadow-lg: rgba(0, 0, 0, 0.4);
+  --clr-overlay: rgba(0, 0, 0, 0.6);
+  --radius-base: 12px;
+  --transition-fast: 0.3s ease;
+  --transition-slow: 0.4s ease-in-out;
+}
+
+/* ===========================================
+      2. Layout global
+      =========================================== */
 section {
   padding: 40px 20px;
-  background: #fff;
+  background: var(--clr-bg);
   margin-top: 100px;
 }
 
-/* Section Tarifs */
 #tarifs .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
+/* ===========================================
+      3. Section Tarifs : titres & intro
+      =========================================== */
 #tarifs h2.titre-section {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 10px;
-  font-family: 'Georgia', serif;
+  color: var(--clr-text);
 }
 
 #tarifs .intro {
   text-align: center;
   margin-bottom: 40px;
-  color: #666;
+  color: var(--clr-text-light);
 }
 
+/* ===========================================
+      4. Catégories
+      =========================================== */
 #tarifs .categorie {
   margin-bottom: 60px;
 }
@@ -46,128 +82,153 @@ section {
   margin-bottom: 20px;
   color: #111;
   text-align: center;
-  font-family: 'Georgia', serif;
 }
 
 #tarifs .categorie img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--radius-base);
   margin-bottom: 20px;
 }
 
-.cartes {
+/* ===========================================
+      5. Cartes (grid / flex container)
+      =========================================== */
+#tarifs .cartes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
 }
 
-.carte {
+/* ===========================================
+      6. Composant .carte
+      =========================================== */
+#tarifs .carte {
   background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-base);
+  box-shadow: 0 0 12px var(--clr-shadow);
   flex: 1 1 300px;
   max-width: 350px;
   position: relative;
-  transition: transform 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
-.carte.active {
+#tarifs .carte:hover {
+  transform: scale(1.02);
+}
+
+#tarifs .carte.active {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
-  z-index: 1000;
   width: 90%;
   max-width: 600px;
-  height: auto;
-  background-color: #fff;
+  background-color: var(--clr-bg);
+  box-shadow: 0 0 20px var(--clr-shadow-lg);
+  transition: all var(--transition-slow);
   overflow-y: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.4s ease-in-out;
+  overflow-x: hidden;
+  z-index: 100;
+  outline: none; /* on utilise box-shadow pour le focus si besoin */
 }
 
-#overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 999;
-  display: none;
-}
-
-#overlay.active {
-  display: block;
-}
-
-.carte h4 {
+/* Titre et liste interne */
+#tarifs .carte h4 {
   font-size: 1.3rem;
   margin-bottom: 15px;
   color: #222;
   text-align: center;
 }
 
-.carte ul {
+#tarifs .carte ul {
   list-style: none;
-  padding-left: 0;
   margin-bottom: 60px;
   text-align: center;
 }
 
-.carte ul li {
+#tarifs .carte ul li {
   margin-bottom: 5px;
   font-size: 0.95rem;
 }
 
-.carte .prix {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #000;
-  background-color: #e0e0e0;
-  padding: 12px 16px;
-  text-align: center;
-  border-radius: 12px;
-  width: calc(100% - 40px);
-  /* tient compte des 20px de padding de la carte */
+/* Prix */
+#tarifs .carte .prix {
   position: absolute;
   bottom: 20px;
   left: 20px;
+  width: calc(100% - 40px);
+  background-color: #e0e0e0;
+  padding: 12px 16px;
+  border-radius: var(--radius-base);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
 }
 
+/* ===========================================
+      7. Overlay
+      =========================================== */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--clr-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast),
+    visibility 0s linear var(--transition-fast);
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+/* ===========================================
+      8. Bouton fermer
+      =========================================== */
 .fermer-carte {
   position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 1.8rem;
-  color: #333;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1001;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.fermer-carte:hover {
+  transform: rotate(90deg);
 }
 
 .carte.active .fermer-carte {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ========================== */
 /* 📱 Très petits appareils - Moins de 576px */
 @media (max-width: 575.98px) {
-  .cartes {
+  #tarifs .cartes {
     flex-direction: column;
     align-items: center;
   }
-
-  .carte {
+  #tarifs .carte {
     width: 100%;
   }
-
   #tarifs h2.titre-section {
     font-size: 2rem;
   }
-
   #tarifs .categorie h3 {
     font-size: 1.4rem;
   }
@@ -175,12 +236,11 @@ section {
 
 /* 📲 Petits appareils - ≥ 576px */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .cartes {
+  #tarifs .cartes {
     flex-direction: column;
     align-items: center;
   }
-
-  .carte {
+  #tarifs .carte {
     width: 80%;
   }
 }
@@ -195,21 +255,20 @@ section {
 
 /* 🖥️ Ordinateurs portables - ≥ 992px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .cartes {
+  #tarifs .cartes {
     gap: 25px;
   }
 }
-
 /* 🖥️ Grands écrans - ≥ 1200px */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  .cartes {
+  #tarifs .cartes {
     gap: 20px;
   }
 }
 
 /* 📺 Très grands écrans - ≥ 1400px */
 @media (min-width: 1400px) {
-  .cartes {
+  #tarifs .cartes {
     gap: 20px;
   }
 }
